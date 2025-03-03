@@ -2,13 +2,13 @@
 PREFIX = /usr/local
 
 install:
-	cp wgetpaste $(PREFIX)/bin
+	cp wgetpaste $(DESTDIR)$(PREFIX)/bin
 
 uninstall:
-	rm -f $(PREFIX)/bin/wgetpaste
+	rm -f $(DESTDIR)$(PREFIX)/bin/wgetpaste
 
 zsh-comp: install
-	mkdir -p $(PREFIX)/share/zsh/site-functions
-	cp _wgetpaste $(PREFIX)/share/zsh/site-functions
+	mkdir -p $(DESTDIR)$(PREFIX)/share/zsh/site-functions
+	cp _wgetpaste $(DESTDIR)$(PREFIX)/share/zsh/site-functions
 
 .PHONY: install uninstall zsh-comp
