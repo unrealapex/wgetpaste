@@ -2,6 +2,7 @@
 PREFIX = /usr/local
 
 install:
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp wgetpaste $(DESTDIR)$(PREFIX)/bin
 
 uninstall:
